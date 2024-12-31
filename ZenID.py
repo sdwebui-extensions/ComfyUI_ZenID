@@ -28,6 +28,8 @@ else:
 folder_paths.folder_names_and_paths["instantid"] = (current_paths, folder_paths.supported_pt_extensions)
 
 INSIGHTFACE_DIR = os.path.join(folder_paths.models_dir, "insightface")
+if os.path.exists(folder_paths.cache_dir):
+    INSIGHTFACE_DIR = "/stable-diffusion-cache/models/annotator/insightface"
 
 arcface_dst = np.array(
     [[38.2946, 51.6963], [73.5318, 51.5014], [56.0252, 71.7366],
